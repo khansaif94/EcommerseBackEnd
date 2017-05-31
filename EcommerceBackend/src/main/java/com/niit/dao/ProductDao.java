@@ -1,6 +1,9 @@
 package com.niit.dao;
 
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
 import com.niit.model.Product;
 
 public interface ProductDao
@@ -16,5 +19,5 @@ public interface ProductDao
 	
 	boolean updateProduct(Product product);
 	
-	
+	public void storeFile(Product product, HttpServletRequest request);
 }

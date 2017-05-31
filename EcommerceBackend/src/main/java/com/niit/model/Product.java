@@ -1,7 +1,4 @@
 package com.niit.model;
-
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,18 +6,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
-
+@Component("product")
 @Entity
-@Table(name="Product")
-
+@Table
 public class Product 
 {
 	@Id
 	@Column(name="ID")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
 	private String productid;
 	
 	@Column(name="NAME")
@@ -90,4 +84,11 @@ public class Product
 	public void setSupplierid(String supplierid) {
 		this.supplierid = supplierid;
 	}
-}
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
+	}
+

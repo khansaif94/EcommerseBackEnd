@@ -63,6 +63,7 @@ public class ApplicationContextConfig
 			sessionBuilder.addProperties(getHibernateProperties());
 			sessionBuilder.addAnnotatedClass(Category.class);
 			sessionBuilder.addAnnotatedClass(Supplier.class);
+			sessionBuilder.scanPackages("com.niit");
 			return sessionBuilder.buildSessionFactory();
 			
 		}

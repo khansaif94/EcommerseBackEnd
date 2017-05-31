@@ -2,6 +2,8 @@ package com.niit.services;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,6 +46,10 @@ public class ProductServiceImpl implements ProductService
 		return productDao.deleteProduct(product) ;
 	}
 	
+	public void storeFile(Product p, HttpServletRequest request)
+	{
+		productDao.storeFile(p,request);
+	}
 	
 		
 }
