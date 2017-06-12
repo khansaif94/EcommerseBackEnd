@@ -1,11 +1,11 @@
-package com.niit.dao;
+package com.niit.services;
 
 import java.util.List;
 
 import com.niit.model.Cart;
 
-public interface CartDao
-{
+public interface CartService {
+
 	public List<Cart> list(String UserID);
 	public void save(Cart cart);
 	public boolean delete(Cart cart );
@@ -18,5 +18,5 @@ public interface CartDao
 	public int getMaxId();
 	public Cart getCart(String userID, String productName);
 	
-	
+		
 }

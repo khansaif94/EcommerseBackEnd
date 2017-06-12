@@ -17,7 +17,7 @@ import com.niit.model.Product;
 public class ProductDaoImpl implements ProductDao {
 	@Autowired
 	 SessionFactory sessionFactory;
-	private Product product;
+	 Product product;
 
 
 	public boolean saveProduct(Product product) {
@@ -67,15 +67,17 @@ public class ProductDaoImpl implements ProductDao {
 	catch (Exception e)
 		{
 			e.printStackTrace();
-			return false;
-			
+			return false;	
 		}	
 	}
 
 	
 	public boolean deleteProduct(Product product) {
 		try {
-			sessionFactory.openSession().delete(product);
+			Session session =sessionFactory.openSession();
+			session.delete(product);
+			session.flush();
+			session.close();
 			return true;
 		} 
 		

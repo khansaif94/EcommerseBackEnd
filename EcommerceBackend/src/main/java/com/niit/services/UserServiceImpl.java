@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.niit.dao.SupplierDao;
 import com.niit.dao.UserDao;
 import com.niit.model.User;
 
