@@ -81,7 +81,7 @@ private static Logger log = LoggerFactory.getLogger(CartDaoimpl.class);
 
 		int maxID = 100;
 		try {
-			String hql = "select max(id) from MyCart";
+			String hql = "select max(id) from Cart";
 			Query query = sessionFactory.openSession().createQuery(hql);
 			maxID = (int) query.uniqueResult();
 		} catch (Exception e) {

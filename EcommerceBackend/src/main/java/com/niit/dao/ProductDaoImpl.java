@@ -46,7 +46,15 @@ public class ProductDaoImpl implements ProductDao {
 		session.close();
 		return productList;
 	}
-
+	public List<Product> getProductsByCategory(String catId){
+		Session  session=sessionFactory.openSession();
+		Query query=session.createQuery("from Product where categoryid=?");
+		query.setParameter(0, catId);
+		List<Product> productList=query.list();
+		session.close();
+		return productList;
+		
+	}
 
 	public Product getProductById(String id) {
 		Session session=sessionFactory.openSession();

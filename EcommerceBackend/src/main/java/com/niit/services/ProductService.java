@@ -12,7 +12,7 @@ public interface ProductService
 	boolean saveProduct(Product product);
 
 	List<Product> getAllProducts();
-
+	List<Product> getProductsByCategory(String catId);
 	Product getProductById(String id);
 
 	boolean deleteProduct(Product product);

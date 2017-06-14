@@ -3,12 +3,13 @@ package com.niit.dao;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-
+import com.niit.dao.UserDao;
 import com.niit.model.User;
 
 @Repository("UserDao")
@@ -97,6 +98,9 @@ public class UserDaoImpl implements UserDao {
 			
 		}	
 	}
+
+
+	
 	
 
 }

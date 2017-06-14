@@ -12,6 +12,8 @@ public interface ProductDao
 	boolean saveProduct(Product product);
 
 	List<Product> getAllProducts();
+	
+	List<Product> getProductsByCategory(String catId);
 
 	Product getProductById(String id);
 

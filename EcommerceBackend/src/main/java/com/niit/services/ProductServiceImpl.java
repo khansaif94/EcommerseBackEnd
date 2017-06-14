@@ -22,6 +22,10 @@ public class ProductServiceImpl implements ProductService
 		return productDao.saveProduct(product) ;
 	}
 
+	public List<Product> getProductsByCategory(String catId)
+	{
+		return productDao.getProductsByCategory(catId);
+	}
 	@Override
 	public List<Product> getAllProducts() {
 		// TODO Auto-generated method stub
