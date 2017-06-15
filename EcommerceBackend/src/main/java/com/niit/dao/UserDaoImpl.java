@@ -50,7 +50,8 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public User getUserById(String id) {
 		Session session=sessionFactory.openSession();
-		User usr=(User)session.get(User.class, id);
+		System.out.println(id);
+		User usr=(User)session.createQuery("from User where userid= '"+id + "'").list().get(0);
 		session.flush();
         session.close();
         return usr;
@@ -90,17 +91,12 @@ public class UserDaoImpl implements UserDao {
 			session.flush();
 			session.close();
 			return true;
-		}
-	catch (Exception e)
-		{
+			}
+		catch (Exception e)
+		  {
 			e.printStackTrace();
 			return false;
 			
-		}	
+		  }	
 	}
-
-
-	
-	
-
 }

@@ -137,5 +137,14 @@ public class ProductDaoImpl implements ProductDao {
 					}
 		}
 		}
+
+
+		@Override
+		public List<Product> search(String productName) {
+			String hql = "from Product where name like '%"+productName+"%'";
+			Query query = sessionFactory.openSession().createQuery(hql);
+			return query.list();
+			
+		}
 }
 	

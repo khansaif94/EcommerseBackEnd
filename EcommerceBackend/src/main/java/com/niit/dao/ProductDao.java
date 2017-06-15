@@ -22,4 +22,6 @@ public interface ProductDao
 	boolean updateProduct(Product product);
 	
 	public void storeFile(Product product, HttpServletRequest request);
+	
+	public List<Product> search(String productName);
 }

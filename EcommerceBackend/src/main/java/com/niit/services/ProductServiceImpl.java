@@ -54,6 +54,12 @@ public class ProductServiceImpl implements ProductService
 	{
 		productDao.storeFile(p,request);
 	}
+
+	@Override
+	public List<Product> search(String productName) {
+		// TODO Auto-generated method stub
+		return productDao.search(productName);
+	}
 	
 		
 }
